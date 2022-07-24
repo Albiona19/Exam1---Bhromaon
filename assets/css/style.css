@@ -853,7 +853,7 @@ textarea {
 }
 
 .testimonials {
-  background-image: url(../assets/images/testimonial.png);
+  background-image: url(../img/testimonial.png);
   background-size: cover;
   position: relative;
 }
