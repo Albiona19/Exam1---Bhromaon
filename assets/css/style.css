@@ -435,6 +435,10 @@ textarea {
   padding: 0.2em 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .footer__container, .testimonials__container, .select-country-2__container, .select-country__container, .why-us__container, .header__container {
   width: 62%;
   margin: 0 19%;

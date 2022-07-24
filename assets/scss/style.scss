@@ -11,6 +11,9 @@ $blue-300: hsl(202, 100%, 50%);
 $blue-500: hsl(229, 98%, 66%);
 $blue-700: hsl(229, 99%, 64%);
 
+html {
+  scroll-behavior: smooth;
+}
 %inner-centered {
   width: 62%;
   margin: 0 19%;
