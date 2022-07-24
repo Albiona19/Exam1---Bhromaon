@@ -206,10 +206,12 @@ html {
   background-color: $blue-500;
   padding: 2.6rem 0;
   text-transform: uppercase;
+
   &__container {
     @extend %inner-centered;
     display: flex;
     justify-content: space-between;
+
   }
   &__logo {
     font-size: 1.3rem;
