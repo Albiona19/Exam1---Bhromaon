@@ -442,7 +442,7 @@ textarea {
 
 .select-country-2__card__button, .select-country__card__button, .why-us__txt__button {
   background: hsl(229deg, 98%, 66%);
-  background: linear-gradient(40deg, hsl(229deg, 98%, 66%) 45%, hsl(229deg, 99%, 64%) 45%);
+  background: linear-gradient(45deg, #496BFE 40%, #5474FD 30%);
 }
 
 .banner-section {
@@ -451,6 +451,18 @@ textarea {
   background-size: cover;
   background-attachment: inherit;
   padding: 18rem 0;
+}
+.banner-section__scroll {
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 2.8px;
+  animation: fade-slide-up 1s 1s ease-out forwards, pulse 2s 3s ease-out infinite;
+  opacity: 0;
+}
+.banner-section__scroll i {
+  color: white;
 }
 .banner-section__container {
   width: 50%;
@@ -509,6 +521,19 @@ textarea {
 .banner-section__search-bar button:hover {
   background-color: hsl(229deg, 99%, 64%);
 }
+@keyframes pulse {
+  from {
+    box-shadow: hsl(0deg, 0%, 100%) 0 0 0;
+  }
+  to {
+    box-shadow: rgba(0, 149, 246, 0.3) 0 0 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+}
 .banner-section__scroll-down {
   color: hsl(0deg, 0%, 100%);
   font-family: "Josefin Sans", sans-serif;
@@ -529,11 +554,64 @@ textarea {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   box-sizing: border-box;
+  animation: fade-slide-up 1s 1s ease-out forwards, pulse 2s 3s ease-out;
 }
 .banner-section__scroll-down span:hover {
   color: hsl(0deg, 0%, 20%);
 }
 
+@keyframes fade-slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fade-slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .header {
   background-color: hsl(229deg, 98%, 66%);
   padding: 2.6rem 0;
@@ -578,6 +656,14 @@ textarea {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 13rem 0;
+  position: relative;
+}
+.why-us::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(35, 35, 35, 0.4);
+  z-index: 1;
+  inset: 0;
 }
 .why-us__container {
   display: flex;
@@ -586,6 +672,7 @@ textarea {
 }
 .why-us__txt {
   width: 50%;
+  z-index: 2;
 }
 .why-us__txt__title {
   color: hsl(0deg, 0%, 100%);
@@ -620,54 +707,13 @@ textarea {
 }
 .why-us__img {
   width: 50%;
+  z-index: 2;
 }
 .why-us__img div:first-child {
   margin-bottom: 1.5rem;
 }
 .why-us__img div:last-child {
   padding-left: 6rem;
-}
-
-.how-it-works {
-  background-color: hsl(0deg, 0%, 14%);
-  padding: 8rem 0;
-}
-.how-it-works--container {
-  width: 70%;
-  margin: 0 15%;
-}
-.how-it-works__list {
-  display: flex;
-  justify-content: center;
-  gap: 15rem;
-}
-.how-it-works__item {
-  font-family: "Aleo", serif;
-  font-size: 2.6rem;
-  line-height: 2.6rem;
-  color: hsl(0deg, 0%, 100%);
-  text-align: center;
-}
-.how-it-works__item i {
-  font-size: 4rem;
-  color: hsl(229deg, 98%, 66%);
-  margin-bottom: 4rem;
-}
-.how-it-works__item:nth-child(2) i {
-  color: hsl(0deg, 100%, 69%);
-}
-.how-it-works__item:nth-child(3) i {
-  color: hsl(202deg, 100%, 50%);
-}
-
-.main {
-  bottom: 0px;
-  width: 100%;
-  height: 70px;
-  background-color: red;
-  border-top-left-radius: 100% 80px;
-  border-top-right-radius: 100% 80px;
-  border-top: 2px solid #ccc;
 }
 
 .select-country {
@@ -718,6 +764,42 @@ textarea {
 }
 .select-country__card__button:hover {
   color: hsl(0deg, 0%, 60%);
+}
+
+.main__item--features {
+  background-color: hsl(0deg, 0%, 14%);
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 16rem;
+  align-items: center;
+  text-align: center;
+  padding: 10rem 0 8rem;
+  position: relative;
+}
+.features--halfcircle {
+  position: absolute;
+  top: -22%;
+  left: 24%;
+}
+.features--halfcirclesec {
+  position: absolute;
+  top: -27%;
+  left: 52%;
+}
+.features__item {
+  display: flex;
+  flex-direction: column;
+  gap: 43px;
+}
+.features__description {
+  font-family: "Aleo", serif;
+  font-weight: normal;
+  font-size: 36px;
+  letter-spacing: 1px;
+  color: hsl(0deg, 0%, 100%);
 }
 
 .select-country-2 {
@@ -773,6 +855,14 @@ textarea {
 .testimonials {
   background-image: url(../assets/images/testimonial.png);
   background-size: cover;
+  position: relative;
+}
+.testimonials::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(35, 35, 35, 0.7);
+  z-index: 1;
+  inset: 0;
 }
 .testimonials__container {
   padding: 10rem 0;
@@ -784,6 +874,17 @@ textarea {
   text-align: center;
   color: hsl(0deg, 0%, 100%);
   margin-bottom: 9.1rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  z-index: 2;
+}
+.testimonials__h2 {
+  z-index: 2;
 }
 .testimonials__card {
   display: flex;
@@ -791,11 +892,13 @@ textarea {
 }
 .testimonials__card__img {
   max-width: 40%;
+  z-index: 2;
 }
 .testimonials__card__txt {
   max-width: 60%;
   background-color: hsl(0deg, 0%, 14%);
   padding: 4.9rem 2.5rem 3.9rem 5.9rem;
+  z-index: 2;
 }
 .testimonials__card__txt h3 {
   font-family: "Josefin Sans", sans-serif;
@@ -803,12 +906,14 @@ textarea {
   line-height: 2.6rem;
   margin-bottom: 0.8rem;
   color: hsl(0deg, 0%, 100%);
+  z-index: 2;
 }
 .testimonials__card__txt p {
   font-family: "Josefin Sans", sans-serif;
   color: hsl(0deg, 0%, 100%);
   font-size: 1.2rem;
   line-height: 2.6rem;
+  z-index: 2;
 }
 .testimonials__card__txt p i {
   color: hsl(229deg, 98%, 66%);
@@ -856,7 +961,11 @@ textarea {
   color: hsl(229deg, 98%, 66%);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1030px) {
+  .features--halfcircle,
+.features--halfcirclesec {
+    display: none;
+  }
   .header__container {
     display: flex;
     flex-direction: column;
@@ -870,6 +979,9 @@ textarea {
   }
   .header__main-nav__item {
     font-size: 1.3rem;
+  }
+  .header .features--halfcircle {
+    display: none;
   }
   .why-us {
     padding: 5rem 0;
@@ -910,6 +1022,10 @@ textarea {
   }
 }
 @media screen and (max-width: 769px) {
+  .features {
+    justify-content: center;
+    flex-direction: column;
+  }
   .banner-section {
     text-align: center;
   }
