@@ -446,7 +446,7 @@ textarea {
 }
 
 .banner-section {
-  background-image: url(../assets/images/banner-image.jpg);
+  background-image: url(../img/banner-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: inherit;
@@ -652,7 +652,7 @@ textarea {
 }
 
 .why-us {
-  background-image: url(../assets/images/why-us.png);
+  background-image: url(../img/why-us.png);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 13rem 0;
@@ -717,7 +717,7 @@ textarea {
 }
 
 .select-country {
-  background-image: url(../assets/images/section-1.png);
+  background-image: url(../img/section-1.png);
   background-size: cover;
 }
 .select-country__container {

@@ -27,7 +27,7 @@ $blue-700: hsl(229, 99%, 64%);
 //* ============================ Banner-Section =============================================
 
 .banner-section {
-  background-image: url(../assets/images/banner-image.jpg);
+  background-image: url(../img/banner-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: inherit;
@@ -243,7 +243,7 @@ $blue-700: hsl(229, 99%, 64%);
 
 //* ================================== Why Us =============================================
 .why-us {
-  background-image: url(../assets/images/why-us.png);
+  background-image: url(../img/why-us.png);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 13rem 0;
@@ -320,7 +320,7 @@ $blue-700: hsl(229, 99%, 64%);
 //* ================================== Select Country =====================================
 
 .select-country {
-  background-image: url(../assets/images/section-1.png);
+  background-image: url(../img/section-1.png);
   background-size: cover;
   &__container {
     @extend %inner-centered;
